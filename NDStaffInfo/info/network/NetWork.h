@@ -10,6 +10,7 @@
 
 @interface NetWork : NSObject
 
-+ (void)getUserInfo:(NSString *)uid success:(void (^)(NSString *userInfoXMLString))success;
++ (void)getUserInfo:(NSString *)uid
+           callBack:(void (^)(BOOL succeed, NSString *msg))callBack;
 
 @end

@@ -15,10 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (DataBaseManager *)instance;
 
-- (FMResultSet *)executeQuery:(NSString *)query;
-- (NSArray *)query:(NSString *)query;
-- (BOOL)executeUpdate:(NSString *)update;
-
 - (BOOL)userInfoIsExist:(NSString *)uid;
 - (NSString *)getUserInfoXMLString:(NSString *)uid;
 - (BOOL)saveUserInfoXMLString:(NSString *)xmlString uid:(NSString *)uid name:(NSString *)name;

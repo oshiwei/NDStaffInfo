@@ -15,6 +15,8 @@
 
 @implementation DataBaseManager
 
+#pragma mark - 单例标准写法
+
 + (DataBaseManager *)instance {
     static DataBaseManager *instance = nil;
     static dispatch_once_t onceToken;
@@ -33,6 +35,8 @@
     return self;
 }
 
+#pragma mark - 数据库初始化
+
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -49,6 +53,8 @@
     // 如果表不存在，则创建表
     [self executeUpdate:@"create table if not exists UserInfo(userid text primary key not null,name text null,info text null);"];
 }
+
+#pragma mark - 数据库基本操作
 
 - (FMResultSet *)executeQuery:(NSString *)query {
     __block FMResultSet *rs = nil;
@@ -81,6 +87,8 @@
     }];
     return result;
 }
+
+#pragma mark - 数据库业务逻辑
 
 - (BOOL)userInfoIsExist:(NSString *)uid {
     NSString *sql = [NSString stringWithFormat:@"select count(*) from UserInfo where userid='%@'", uid];

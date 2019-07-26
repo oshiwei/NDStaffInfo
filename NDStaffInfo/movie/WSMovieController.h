@@ -10,6 +10,6 @@
 
 @interface WSMovieController : UIViewController
 
-@property(nonatomic,strong)NSURL *movieURL;
+@property (nonatomic,strong) NSURL *movieURL;
 
 @end

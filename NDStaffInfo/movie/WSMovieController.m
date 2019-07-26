@@ -8,13 +8,12 @@
 
 #import "WSMovieController.h"
 #import <AVFoundation/AVFoundation.h>
-#import <MediaPlayer/MediaPlayer.h>
 #import <AVKit/AVKit.h>
 #import "RootNavController.h"
 #import "InfoViewController.h"
 
 @interface WSMovieController ()
-@property (strong, nonatomic) MPMoviePlayerController *player;
+@property (strong, nonatomic) AVPlayerViewController *playerC;
 @end
 
 @implementation WSMovieController
@@ -29,20 +28,21 @@
 
 - (void)SetupVideoPlayer
 {
-    self.player = [[MPMoviePlayerController alloc] initWithContentURL:_movieURL];
-    [self.view addSubview:self.player.view];
-    self.player.shouldAutoplay = YES;
-    [self.player setScalingMode:MPMovieScalingModeAspectFill];
-    [self.player setControlStyle:MPMovieControlStyleNone];
-    self.player.repeatMode = MPMovieRepeatModeOne;
-    [self.player.view setFrame:[UIScreen mainScreen].bounds];
-    self.player.view.alpha = 0;
+    AVPlayer *player = [AVPlayer playerWithURL:self.movieURL];
+    self.playerC = [[AVPlayerViewController alloc] init];
+    self.playerC.player = player;
+    self.playerC.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    self.playerC.showsPlaybackControls = NO;
+    [self addChildViewController:self.playerC];
+    [self.view addSubview:self.playerC.view];
+    [self.playerC.view setFrame:[UIScreen mainScreen].bounds];
+    self.playerC.view.alpha = 0;
     [UIView animateWithDuration:3 animations:^{
-        self.player.view.alpha = 1;
-        [self.player prepareToPlay];
+        self.playerC.view.alpha = 1;
+    } completion:^(BOOL finished) {
+        [self.playerC.player play];
     }];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackStateChanged) name:MPMoviePlayerLoadStateDidChangeNotification object:nil];
-
+    
     [self setupLoginView];
 }
 
@@ -56,24 +56,13 @@
     enterMainButton.layer.borderColor = [UIColor whiteColor].CGColor;
     [enterMainButton setTitle:@"进入应用" forState:UIControlStateNormal];
     enterMainButton.alpha = 0;
-    [self.player.view addSubview:enterMainButton];
+    [self.view addSubview:enterMainButton];
     [enterMainButton addTarget:self action:@selector(enterMainAction:) forControlEvents:UIControlEventTouchUpInside];
-    
     
     [UIView animateWithDuration:3.0 animations:^{
         enterMainButton.alpha = 1.0;
     }];
 }
-
-#pragma mark - NSNotificationCenter
-- (void)playbackStateChanged
-{
-    MPMoviePlaybackState playbackState = [self.player playbackState];
-    if (playbackState == MPMoviePlaybackStateStopped || playbackState == MPMoviePlaybackStatePaused) {
-        [self.player play];
-    }
-}
-
 
 - (void)enterMainAction:(UIButton *)btn {
     NSLog(@"进入应用");

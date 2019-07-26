@@ -33,7 +33,7 @@
         NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(YES, responseString);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        success(NO, @"请求失败");
+        callBack(NO, @"请求失败");
     }];
 }
 

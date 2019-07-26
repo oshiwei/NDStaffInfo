@@ -51,7 +51,7 @@
     // 如果staffinfo.db不存在，会自动创建
     self.queue = [FMDatabaseQueue databaseQueueWithPath:self.dbPath];
     // 如果表不存在，则创建表
-    [self executeUpdate:@"create table if not exists UserInfo(userid text primary key not null,name text null,info text null);"];
+    [self executeUpdate:@"create table if not exists UserInfo(userid text primary key not null,name text null,pinyin text null,firstpy text null,info text null);"];
 }
 
 #pragma mark - 数据库基本操作
@@ -93,7 +93,7 @@
 - (BOOL)userInfoIsExist:(NSString *)uid {
     NSString *sql = [NSString stringWithFormat:@"select count(*) from UserInfo where userid='%@'", uid];
     FMResultSet *result = [self executeQuery:sql];
-    if (result) {
+    if ([result next]) {
         return ([result intForColumnIndex:0] > 0);
     }
     return NO;
@@ -102,14 +102,14 @@
 - (NSString *)getUserInfoXMLString:(NSString *)uid {
     NSString *sql = [NSString stringWithFormat:@"select info from UserInfo where userid='%@'", uid];
     FMResultSet *result = [self executeQuery:sql];
-    if (result) {
+    if ([result next]) {
         return [result stringForColumn:@"info"];
     }
     return nil;
 }
 
-- (BOOL)saveUserInfoXMLString:(NSString *)xmlString uid:(NSString *)uid name:(NSString *)name {
-    NSString *sql = [NSString stringWithFormat:@"replace into UserInfo(userid,name,info) values('%@','%@','%@')", uid, name, xmlString];
+- (BOOL)saveUserInfoXMLString:(NSString *)xmlString uid:(NSString *)uid name:(NSString *)name pinyin:(NSString *)pinyin firstpy:(NSString *)firstpy {
+    NSString *sql = [NSString stringWithFormat:@"replace into UserInfo(userid,name,pinyin,firstpy,info) values('%@','%@','%@','%@','%@')", uid, name, pinyin, firstpy, xmlString];
     return [self executeUpdate:sql];
 }
 

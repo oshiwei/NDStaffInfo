@@ -27,9 +27,15 @@
 }
 
 + (void)getUserInfo:(NSString *)uid callBack:(void (^)(BOOL succeed, NSString *msg))callBack {
+    // 这边要检查uid是否合法，不能输了lhz也去请求
+    
     NSString *urlStr = @"http://nderp.99.com/ajaxpro/Nd.Hr.Webs.Rsdaweb.K7_frmrsdaUserInfo,Nd.Hr.Webs.ashx";
     NSDictionary *param = @{@"spersoncode":uid};
-    [[self manager] POST:urlStr parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[self manager] POST:urlStr
+              parameters:param
+                progress:nil
+                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                     
         NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(YES, responseString);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

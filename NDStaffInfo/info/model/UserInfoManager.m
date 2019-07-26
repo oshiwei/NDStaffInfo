@@ -14,6 +14,7 @@
 @implementation UserInfoManager
 
 + (UserInfoManager *)instance {
+    
     static UserInfoManager *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -23,11 +24,13 @@
 }
 
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
+    
     return [self instance];
 }
 
 // NSCopying
 - (id)copyWithZone:(nullable NSZone *)zone {
+    
     return self;
 }
 
@@ -35,6 +38,7 @@
        userInfoXMLString:(NSString *)userInfoXMLString
                   saveDB:(BOOL)saveDB
        completionHandler:(void (^)(NSDictionary *infoDic))completionHandler {
+    
     NSDictionary *infoDic = nil;
     NSRange range = [userInfoXMLString rangeOfString:@"<root>[\\w\\W]*</root>" options:NSRegularExpressionSearch];
     if (range.location != NSNotFound) {
@@ -79,6 +83,7 @@
 }
 
 - (void)getUserInfo:(NSString *)uid completionHandler:(void (^)(NSDictionary *infoDic))completionHandler {
+    
     if (!uid || [uid length] == 0) {
         completionHandler(nil);
         return;

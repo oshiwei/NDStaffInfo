@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		16039628FB43FBDB43B42C70 /* Pods_NDStaffInfoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654E759710C962A56135D84D /* Pods_NDStaffInfoUITests.framework */; };
 		51A24AAB1160DCC7A338A5DB /* Pods_NDStaffInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F8A1D74A7C764D3A434D03 /* Pods_NDStaffInfo.framework */; };
+		8449956F22E857B900E6D027 /* NSDictionary+pretty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449956E22E857B900E6D027 /* NSDictionary+pretty.m */; };
 		8458B97122940CCE005CD1EF /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B97022940CCE005CD1EF /* NetWork.m */; };
 		8458B97522940EBC005CD1EF /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B97422940EBC005CD1EF /* UserInfoManager.m */; };
 		84DC57C1228EB73300E402EE /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC57C0228EB73300E402EE /* InfoViewController.m */; };
 		84DC57C5228EBC6700E402EE /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC57C4228EBC6700E402EE /* DataBaseManager.m */; };
+		84E3D09C22E98BB30025B055 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3D09B22E98BB30025B055 /* UserInfoModel.m */; };
 		8815B8561DAF18ED00132720 /* qidong.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8815B8551DAF18ED00132720 /* qidong.mp4 */; };
 		882D3A5E1D73D6CE00BEED93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 882D3A5D1D73D6CE00BEED93 /* main.m */; };
 		882D3A611D73D6CE00BEED93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 882D3A601D73D6CE00BEED93 /* AppDelegate.m */; };
@@ -51,6 +53,8 @@
 		654E759710C962A56135D84D /* Pods_NDStaffInfoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NDStaffInfoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		769D8D0BD4316D9CE29A8117 /* Pods-NDStaffInfoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDStaffInfoUITests.debug.xcconfig"; path = "Target Support Files/Pods-NDStaffInfoUITests/Pods-NDStaffInfoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7FB8777C8AAA65591EF1C806 /* Pods-NDStaffInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDStaffInfoTests.debug.xcconfig"; path = "Target Support Files/Pods-NDStaffInfoTests/Pods-NDStaffInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8449956D22E857B900E6D027 /* NSDictionary+pretty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+pretty.h"; sourceTree = "<group>"; };
+		8449956E22E857B900E6D027 /* NSDictionary+pretty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+pretty.m"; sourceTree = "<group>"; };
 		8458B96F22940CCE005CD1EF /* NetWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
 		8458B97022940CCE005CD1EF /* NetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
 		8458B97322940EBC005CD1EF /* UserInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		84DC57C0228EB73300E402EE /* InfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		84DC57C3228EBC6700E402EE /* DataBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
 		84DC57C4228EBC6700E402EE /* DataBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
+		84E3D09A22E98BB30025B055 /* UserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		84E3D09B22E98BB30025B055 /* UserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
 		8815B8551DAF18ED00132720 /* qidong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = qidong.mp4; sourceTree = "<group>"; };
 		882D3A591D73D6CE00BEED93 /* NDStaffInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NDStaffInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882D3A5D1D73D6CE00BEED93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,6 +143,8 @@
 			children = (
 				8458B97322940EBC005CD1EF /* UserInfoManager.h */,
 				8458B97422940EBC005CD1EF /* UserInfoManager.m */,
+				84E3D09A22E98BB30025B055 /* UserInfoModel.h */,
+				84E3D09B22E98BB30025B055 /* UserInfoModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -172,6 +180,15 @@
 			path = database;
 			sourceTree = "<group>";
 		};
+		84E3D09D22E98BD30025B055 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				8449956D22E857B900E6D027 /* NSDictionary+pretty.h */,
+				8449956E22E857B900E6D027 /* NSDictionary+pretty.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		882D3A501D73D6CE00BEED93 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +214,7 @@
 		882D3A5B1D73D6CE00BEED93 /* NDStaffInfo */ = {
 			isa = PBXGroup;
 			children = (
+				84E3D09D22E98BD30025B055 /* category */,
 				84DC57BE228EB6E500E402EE /* info */,
 				84DC57BD228EB6C200E402EE /* movie */,
 				88CC7E731ED6808200B6BE4F /* root */,
@@ -327,7 +345,8 @@
 				TargetAttributes = {
 					882D3A581D73D6CE00BEED93 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = KX4VY3JTB7;
+						DevelopmentTeam = T7SZ5KZMB4;
+						ProvisioningStyle = Manual;
 					};
 					882D3A711D73D6CE00BEED93 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -487,11 +506,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8449956F22E857B900E6D027 /* NSDictionary+pretty.m in Sources */,
 				882D3A911D73D72500BEED93 /* WSMovieController.m in Sources */,
 				8458B97122940CCE005CD1EF /* NetWork.m in Sources */,
 				8458B97522940EBC005CD1EF /* UserInfoManager.m in Sources */,
 				88CC7E7C1ED681F500B6BE4F /* RootNavController.m in Sources */,
 				84DC57C5228EBC6700E402EE /* DataBaseManager.m in Sources */,
+				84E3D09C22E98BB30025B055 /* UserInfoModel.m in Sources */,
 				882D3A611D73D6CE00BEED93 /* AppDelegate.m in Sources */,
 				84DC57C1228EB73300E402EE /* InfoViewController.m in Sources */,
 				882D3A5E1D73D6CE00BEED93 /* main.m in Sources */,
@@ -637,12 +658,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				DEVELOPMENT_TEAM = KX4VY3JTB7;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = T7SZ5KZMB4;
 				INFOPLIST_FILE = NDStaffInfo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wangzw.NDStaffInfo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nd.app.factory.dynamicnew99u;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = com.nd.app.factory.dynamicnew99uinhouse;
 			};
 			name = Debug;
 		};
@@ -652,12 +676,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				DEVELOPMENT_TEAM = KX4VY3JTB7;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = T7SZ5KZMB4;
 				INFOPLIST_FILE = NDStaffInfo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wangzw.NDStaffInfo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nd.app.factory.dynamicnew99u;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = com.nd.app.factory.dynamicnew99uinhouse;
 			};
 			name = Release;
 		};

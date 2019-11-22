@@ -12,6 +12,9 @@
 		8449956F22E857B900E6D027 /* NSDictionary+pretty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449956E22E857B900E6D027 /* NSDictionary+pretty.m */; };
 		8458B97122940CCE005CD1EF /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B97022940CCE005CD1EF /* NetWork.m */; };
 		8458B97522940EBC005CD1EF /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B97422940EBC005CD1EF /* UserInfoManager.m */; };
+		848C0F84237E89DD000E3D71 /* UIImage+create.m in Sources */ = {isa = PBXBuildFile; fileRef = 848C0F83237E89DD000E3D71 /* UIImage+create.m */; };
+		848C0F8A237ECAD3000E3D71 /* UserInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 848C0F89237ECAD3000E3D71 /* UserInfoHelper.m */; };
+		84C662AD2387BE7600E16519 /* SearchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C662AC2387BE7600E16519 /* SearchHelper.m */; };
 		84DC57C1228EB73300E402EE /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC57C0228EB73300E402EE /* InfoViewController.m */; };
 		84DC57C5228EBC6700E402EE /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC57C4228EBC6700E402EE /* DataBaseManager.m */; };
 		84E3D09C22E98BB30025B055 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3D09B22E98BB30025B055 /* UserInfoModel.m */; };
@@ -59,6 +62,13 @@
 		8458B97022940CCE005CD1EF /* NetWork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
 		8458B97322940EBC005CD1EF /* UserInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
 		8458B97422940EBC005CD1EF /* UserInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
+		848C0F82237E89DD000E3D71 /* UIImage+create.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+create.h"; sourceTree = "<group>"; };
+		848C0F83237E89DD000E3D71 /* UIImage+create.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+create.m"; sourceTree = "<group>"; };
+		848C0F88237ECAD3000E3D71 /* UserInfoHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoHelper.h; sourceTree = "<group>"; };
+		848C0F89237ECAD3000E3D71 /* UserInfoHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoHelper.m; sourceTree = "<group>"; };
+		848C0F8E237ECC60000E3D71 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		84C662AB2387BE7600E16519 /* SearchHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchHelper.h; sourceTree = "<group>"; };
+		84C662AC2387BE7600E16519 /* SearchHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchHelper.m; sourceTree = "<group>"; };
 		84DC57BF228EB73300E402EE /* InfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		84DC57C0228EB73300E402EE /* InfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		84DC57C3228EBC6700E402EE /* DataBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
@@ -167,6 +177,10 @@
 				84DC57C2228EBC4100E402EE /* database */,
 				84DC57BF228EB73300E402EE /* InfoViewController.h */,
 				84DC57C0228EB73300E402EE /* InfoViewController.m */,
+				848C0F88237ECAD3000E3D71 /* UserInfoHelper.h */,
+				848C0F89237ECAD3000E3D71 /* UserInfoHelper.m */,
+				84C662AB2387BE7600E16519 /* SearchHelper.h */,
+				84C662AC2387BE7600E16519 /* SearchHelper.m */,
 			);
 			path = info;
 			sourceTree = "<group>";
@@ -185,6 +199,8 @@
 			children = (
 				8449956D22E857B900E6D027 /* NSDictionary+pretty.h */,
 				8449956E22E857B900E6D027 /* NSDictionary+pretty.m */,
+				848C0F82237E89DD000E3D71 /* UIImage+create.h */,
+				848C0F83237E89DD000E3D71 /* UIImage+create.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -214,6 +230,7 @@
 		882D3A5B1D73D6CE00BEED93 /* NDStaffInfo */ = {
 			isa = PBXGroup;
 			children = (
+				848C0F8E237ECC60000E3D71 /* Defines.h */,
 				84E3D09D22E98BD30025B055 /* category */,
 				84DC57BE228EB6E500E402EE /* info */,
 				84DC57BD228EB6C200E402EE /* movie */,
@@ -363,6 +380,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -508,7 +526,10 @@
 			files = (
 				8449956F22E857B900E6D027 /* NSDictionary+pretty.m in Sources */,
 				882D3A911D73D72500BEED93 /* WSMovieController.m in Sources */,
+				848C0F8A237ECAD3000E3D71 /* UserInfoHelper.m in Sources */,
 				8458B97122940CCE005CD1EF /* NetWork.m in Sources */,
+				848C0F84237E89DD000E3D71 /* UIImage+create.m in Sources */,
+				84C662AD2387BE7600E16519 /* SearchHelper.m in Sources */,
 				8458B97522940EBC005CD1EF /* UserInfoManager.m in Sources */,
 				88CC7E7C1ED681F500B6BE4F /* RootNavController.m in Sources */,
 				84DC57C5228EBC6700E402EE /* DataBaseManager.m in Sources */,
@@ -662,7 +683,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = T7SZ5KZMB4;
 				INFOPLIST_FILE = NDStaffInfo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nd.app.factory.dynamicnew99u;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -680,7 +701,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = T7SZ5KZMB4;
 				INFOPLIST_FILE = NDStaffInfo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nd.app.factory.dynamicnew99u;
 				PRODUCT_NAME = "$(TARGET_NAME)";

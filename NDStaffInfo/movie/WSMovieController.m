@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AVKit/AVKit.h>
 #import "RootNavController.h"
-#import "InfoViewController.h"
+#import "SearchViewController.h"
 
 @interface WSMovieController ()
 @property (strong, nonatomic) AVPlayerViewController *playerC;
@@ -66,7 +66,7 @@
 
 - (void)enterMainAction:(UIButton *)btn {
     NSLog(@"进入应用");
-    RootNavController *rootTabCtrl = [[RootNavController alloc] initWithRootViewController:[InfoViewController new]];
+    RootNavController *rootTabCtrl = [[RootNavController alloc] initWithRootViewController:[SearchViewController new]];
     self.view.window.rootViewController = rootTabCtrl;
 }
 

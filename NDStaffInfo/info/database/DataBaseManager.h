@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)getUserInfoXMLString:(NSString *)uid;
 - (BOOL)saveUserInfoXMLString:(NSString *)xmlString uid:(NSString *)uid name:(NSString *)name pinyin:(NSString *)pinyin firstpy:(NSString *)firstpy;
 
-- (NSArray *)getUserInfoXMLStirngByName:(NSString *)name;
+- (NSArray *)searchUser:(NSString *)text;
 
 @end
 

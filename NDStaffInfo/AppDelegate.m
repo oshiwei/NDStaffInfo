@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "WSMovieController.h"
 #import "RootNavController.h"
-#import "InfoViewController.h"
+#import "SearchViewController.h"
 
 @interface AppDelegate ()
 
@@ -42,7 +42,7 @@
 
     } else {
         //不是首次启动
-        RootNavController *rootTabCtrl = [[RootNavController alloc] initWithRootViewController:[InfoViewController new]];
+        RootNavController *rootTabCtrl = [[RootNavController alloc] initWithRootViewController:[SearchViewController new]];
         self.window.rootViewController = rootTabCtrl;
     }
     

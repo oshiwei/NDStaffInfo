@@ -8,6 +8,7 @@
 
 #import "RootNavController.h"
 #import "UIImage+create.h"
+#import "Defines.h"
 
 @interface RootNavController ()
 
@@ -20,11 +21,11 @@
     
     navBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     navBar.tintColor = [UIColor whiteColor];
-    navBar.barTintColor = [UIColor colorWithRed:44/255.0 green:185/255.0 blue:176/255.0 alpha:1];
+    navBar.barTintColor = MainColor;
     [navBar setTranslucent:NO];
     
-    [navBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:44/255.0 green:185/255.0 blue:176/255.0 alpha:1]] forBarMetrics:UIBarMetricsDefault];
-    [navBar setShadowImage:[UIImage imageWithColor:[UIColor colorWithRed:44/255.0 green:185/255.0 blue:176/255.0 alpha:1]]];
+    [navBar setBackgroundImage:[UIImage imageWithColor:MainColor] forBarMetrics:UIBarMetricsDefault];
+    [navBar setShadowImage:[UIImage imageWithColor:MainColor]];
 }
 
 - (void)viewDidLoad {

@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)getUserInfo:(NSString *)uid completionHandler:(void (^)(NSDictionary *infoDic))completionHandler;
 
+- (void)searchText:(NSString *)text completionHandler:(void (^)(NSArray *info))completionHandler;
+
 @end
 
 NS_ASSUME_NONNULL_END

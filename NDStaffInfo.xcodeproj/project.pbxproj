@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09000AEE256E6683000B5EA5 /* staffinfo.db in Resources */ = {isa = PBXBuildFile; fileRef = 09000AED256E6682000B5EA5 /* staffinfo.db */; };
+		09402FBA256E41EC00BD410E /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09402FB9256E41EC00BD410E /* SearchViewController.m */; };
+		096C653F256E9E2A002B0719 /* SearchTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 096C653E256E9E2A002B0719 /* SearchTipView.m */; };
 		16039628FB43FBDB43B42C70 /* Pods_NDStaffInfoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654E759710C962A56135D84D /* Pods_NDStaffInfoUITests.framework */; };
 		51A24AAB1160DCC7A338A5DB /* Pods_NDStaffInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F8A1D74A7C764D3A434D03 /* Pods_NDStaffInfo.framework */; };
 		8449956F22E857B900E6D027 /* NSDictionary+pretty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449956E22E857B900E6D027 /* NSDictionary+pretty.m */; };
 		8458B97122940CCE005CD1EF /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B97022940CCE005CD1EF /* NetWork.m */; };
 		8458B97522940EBC005CD1EF /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B97422940EBC005CD1EF /* UserInfoManager.m */; };
 		848C0F84237E89DD000E3D71 /* UIImage+create.m in Sources */ = {isa = PBXBuildFile; fileRef = 848C0F83237E89DD000E3D71 /* UIImage+create.m */; };
-		848C0F8A237ECAD3000E3D71 /* UserInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 848C0F89237ECAD3000E3D71 /* UserInfoHelper.m */; };
-		84C662AD2387BE7600E16519 /* SearchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C662AC2387BE7600E16519 /* SearchHelper.m */; };
 		84DC57C1228EB73300E402EE /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC57C0228EB73300E402EE /* InfoViewController.m */; };
 		84DC57C5228EBC6700E402EE /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC57C4228EBC6700E402EE /* DataBaseManager.m */; };
 		84E3D09C22E98BB30025B055 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3D09B22E98BB30025B055 /* UserInfoModel.m */; };
@@ -49,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09000AED256E6682000B5EA5 /* staffinfo.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = staffinfo.db; sourceTree = "<group>"; };
+		09402FB8256E41EC00BD410E /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		09402FB9256E41EC00BD410E /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		096C653D256E9E2A002B0719 /* SearchTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTipView.h; sourceTree = "<group>"; };
+		096C653E256E9E2A002B0719 /* SearchTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTipView.m; sourceTree = "<group>"; };
 		136D8FB20E7046F3E1C24C3E /* Pods-NDStaffInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDStaffInfo.release.xcconfig"; path = "Target Support Files/Pods-NDStaffInfo/Pods-NDStaffInfo.release.xcconfig"; sourceTree = "<group>"; };
 		2B16F35A075E6235D8B2CD7D /* Pods-NDStaffInfoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDStaffInfoTests.release.xcconfig"; path = "Target Support Files/Pods-NDStaffInfoTests/Pods-NDStaffInfoTests.release.xcconfig"; sourceTree = "<group>"; };
 		51F8A1D74A7C764D3A434D03 /* Pods_NDStaffInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NDStaffInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,11 +70,7 @@
 		8458B97422940EBC005CD1EF /* UserInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
 		848C0F82237E89DD000E3D71 /* UIImage+create.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+create.h"; sourceTree = "<group>"; };
 		848C0F83237E89DD000E3D71 /* UIImage+create.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+create.m"; sourceTree = "<group>"; };
-		848C0F88237ECAD3000E3D71 /* UserInfoHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoHelper.h; sourceTree = "<group>"; };
-		848C0F89237ECAD3000E3D71 /* UserInfoHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoHelper.m; sourceTree = "<group>"; };
 		848C0F8E237ECC60000E3D71 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
-		84C662AB2387BE7600E16519 /* SearchHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchHelper.h; sourceTree = "<group>"; };
-		84C662AC2387BE7600E16519 /* SearchHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchHelper.m; sourceTree = "<group>"; };
 		84DC57BF228EB73300E402EE /* InfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		84DC57C0228EB73300E402EE /* InfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		84DC57C3228EBC6700E402EE /* DataBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
@@ -175,12 +177,12 @@
 				8458B97222940EA4005CD1EF /* model */,
 				8458B96E22940CA1005CD1EF /* network */,
 				84DC57C2228EBC4100E402EE /* database */,
+				09402FB8256E41EC00BD410E /* SearchViewController.h */,
+				09402FB9256E41EC00BD410E /* SearchViewController.m */,
+				096C653D256E9E2A002B0719 /* SearchTipView.h */,
+				096C653E256E9E2A002B0719 /* SearchTipView.m */,
 				84DC57BF228EB73300E402EE /* InfoViewController.h */,
 				84DC57C0228EB73300E402EE /* InfoViewController.m */,
-				848C0F88237ECAD3000E3D71 /* UserInfoHelper.h */,
-				848C0F89237ECAD3000E3D71 /* UserInfoHelper.m */,
-				84C662AB2387BE7600E16519 /* SearchHelper.h */,
-				84C662AC2387BE7600E16519 /* SearchHelper.m */,
 			);
 			path = info;
 			sourceTree = "<group>";
@@ -188,6 +190,7 @@
 		84DC57C2228EBC4100E402EE /* database */ = {
 			isa = PBXGroup;
 			children = (
+				09000AED256E6682000B5EA5 /* staffinfo.db */,
 				84DC57C3228EBC6700E402EE /* DataBaseManager.h */,
 				84DC57C4228EBC6700E402EE /* DataBaseManager.m */,
 			);
@@ -401,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09000AEE256E6683000B5EA5 /* staffinfo.db in Resources */,
 				882D3A6C1D73D6CE00BEED93 /* LaunchScreen.storyboard in Resources */,
 				882D3A691D73D6CE00BEED93 /* Assets.xcassets in Resources */,
 				882D3A671D73D6CE00BEED93 /* Main.storyboard in Resources */,
@@ -525,11 +529,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8449956F22E857B900E6D027 /* NSDictionary+pretty.m in Sources */,
+				096C653F256E9E2A002B0719 /* SearchTipView.m in Sources */,
 				882D3A911D73D72500BEED93 /* WSMovieController.m in Sources */,
-				848C0F8A237ECAD3000E3D71 /* UserInfoHelper.m in Sources */,
 				8458B97122940CCE005CD1EF /* NetWork.m in Sources */,
 				848C0F84237E89DD000E3D71 /* UIImage+create.m in Sources */,
-				84C662AD2387BE7600E16519 /* SearchHelper.m in Sources */,
+				09402FBA256E41EC00BD410E /* SearchViewController.m in Sources */,
 				8458B97522940EBC005CD1EF /* UserInfoManager.m in Sources */,
 				88CC7E7C1ED681F500B6BE4F /* RootNavController.m in Sources */,
 				84DC57C5228EBC6700E402EE /* DataBaseManager.m in Sources */,

@@ -61,17 +61,19 @@
                 NSString *pinYin = @"";
                 __block NSString *firstPinYin = @"";
                 NSMutableString *mtName = [name mutableCopy];
-                if (CFStringTransform((__bridge CFMutableStringRef)mtName, NULL, kCFStringTransformMandarinLatin, NO)) {
+                if (mtName && CFStringTransform((__bridge CFMutableStringRef)mtName, NULL, kCFStringTransformMandarinLatin, NO)) {
                     if (CFStringTransform((__bridge CFMutableStringRef)mtName, NULL, kCFStringTransformStripDiacritics, NO)) {
                         NSArray *strings = [mtName componentsSeparatedByString:@" "];
                         pinYin = [strings componentsJoinedByString:@""];
                         [strings enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                            firstPinYin = [firstPinYin stringByAppendingString:[obj substringToIndex:1]];
+                            if (((NSString *)obj).length > 0) {
+                                firstPinYin = [firstPinYin stringByAppendingString:[obj substringToIndex:1]];
+                            }
                         }];
                     }
                 }
                 
-                [[DataBaseManager instance] saveUserInfoXMLString:userInfoXMLString uid:uid name:name pinyin:pinYin firstpy:firstPinYin];
+                [[DataBaseManager instance] saveUserInfoXMLString:xmlString uid:uid name:name pinyin:pinYin firstpy:firstPinYin];
             }
         }
     }
@@ -83,7 +85,6 @@
 }
 
 - (void)getUserInfo:(NSString *)uid completionHandler:(void (^)(NSDictionary *infoDic))completionHandler {
-    
     if (!uid || [uid length] == 0) {
         completionHandler(nil);
         return;
@@ -101,6 +102,15 @@
            [self processXMLString:uid userInfoXMLString:userInfoXMLString saveDB:NO completionHandler:completionHandler];
         });
     }
+}
+
+- (void)searchText:(NSString *)text completionHandler:(void (^)(NSArray *info))completionHandler {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSArray *info = [[DataBaseManager instance] searchUser:text];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(info);
+        });
+    });
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DataBaseManager.h"
+#import "UserInfoModel.h"
 
 @interface DataBaseManager ()
 @property (nonatomic, copy) NSString *dbPath;
@@ -48,6 +49,13 @@
 - (void)dataBaseInit {
     NSString *dbFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     self.dbPath = [dbFolder stringByAppendingPathComponent:@"staffinfo.db"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:self.dbPath]) {
+        NSString *resPath = [[NSBundle mainBundle] pathForResource:@"staffinfo" ofType:@"db"];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:resPath]) {
+            // 如果res存在数据库，则拷贝到doc
+            [[NSFileManager defaultManager] copyItemAtPath:resPath toPath:self.dbPath error:NULL];
+        }
+    }
     // 如果staffinfo.db不存在，会自动创建
     self.queue = [FMDatabaseQueue databaseQueueWithPath:self.dbPath];
     // 如果表不存在，则创建表
@@ -113,15 +121,20 @@
     return [self executeUpdate:sql];
 }
 
-- (NSArray *)getUserInfoXMLStirngByName:(NSString *)name {
-    NSString *sql = [NSString stringWithFormat:@"select info from UserInfo where name like '%%%@%%'", name];
+- (NSArray *)searchUser:(NSString *)text {
+    NSString *sql = [NSString stringWithFormat:@"select userid, name from UserInfo where userid like '%%%@%%' or name like '%%%@%%' or pinyin like '%%%@%%' or firstpy like '%%%@%%'", text, text, text, text];
     __block NSMutableArray *array = [NSMutableArray array];
     [self.queue inDatabase:^(FMDatabase * _Nonnull db) {
         FMResultSet *rs = [db executeQuery:sql];
         while ([rs next]) {
-            NSString *xmlString = [rs stringForColumn:@"info"];
-            [array addObject:xmlString];
+            NSString *userid = [rs stringForColumn:@"userid"];
+            NSString *name = [rs stringForColumn:@"name"];
+            UserInfoModel *model = [UserInfoModel new];
+            model.title = name;
+            model.value = userid;
+            [array addObject:model];
         }
+        [rs close];
     }];
     return [array copy];
 }
